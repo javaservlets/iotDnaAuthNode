@@ -72,4 +72,4 @@ C. Update in ForgeRock the user's attribute of **sunIdentityMSISDNNumber** with 
 
 
 ## Verification on your Watch
-1. The last step is to run the Wearable APK as described at https://github.com/javaservlets/iotDnaWearable
+1. At this point the Authentication Tree is waiting for the user to run the Wearable APK as described at https://github.com/javaservlets/iotDnaWearable
