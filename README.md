@@ -33,7 +33,7 @@ C. Update in ForgeRock the user's attribute of **sunIdentityMSISDNNumber** with 
 
 2. Click on the **Add Tree** button. Name the tree iotDNA and click **Create**.
 
-3. Add the tree node **Success** to the canvas
+3. Add the tree node **Success** to the canvas<br/>
 ![image alt text](./images/1a.png)
 
 4. Add **Username Collector** node to the canvas and connect it's input originating from the **Start** node and it's output connect to the **Success node**
