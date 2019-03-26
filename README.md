@@ -13,9 +13,9 @@ This document assumes that you already have:
 
 ## Configuration in iotDNA
 
-At a high-level, in iotDNA via the following calls first get an access token, then based on a device's serial number (see #2 above) coupled with a user's name, enroll it. The result will be a GUID which will be needed during the 'verify' call which takes place later in the Authentication Node. 
+At a high-level, in iotDNA via the following calls first get an access token, then based on a device's serial number (see #2 above) coupled with a user's name, iotDna-enroll it. The result will be a GUID which will be needed during the iotDna-verify call which takes place later in the Authentication Node. 
 
-Thus for a user 'demo' with a wearable serial number of '601KPZK0343037'
+Thus for a user 'demo' with a wearable serial number of '601KPZK0343037':
 
 A. curl -X POST https://{your iotDNA server address}/usermanager/oauth/token -d 'scope=IGNORED&grant_type=client_credentials' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Authorization: Basic {your base64 encoded credentials}'
 
