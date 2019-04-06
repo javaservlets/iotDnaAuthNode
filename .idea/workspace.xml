@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e85b2cd6-067f-4f4f-ba49-87a6bda25fc9" name="Default Changelist" comment="" />
+    <list default="true" id="e85b2cd6-067f-4f4f-ba49-87a6bda25fc9" name="Default Changelist" comment="cleared to_do list">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaVerify.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaVerify.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/iotDna/iotDnaVerify.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/iotDna/iotDnaVerify.properties" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -9,17 +14,55 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaVerify.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="132">
+              <caret line="53" column="46" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="46" />
               <folding>
-                <element signature="e#0#6613#0" expanded="true" />
-                <element signature="class#Config#0;class#iotDnaVerify#0" expanded="true" />
+                <element signature="e#2024#2025#0" expanded="true" />
+                <element signature="e#2087#2088#0" expanded="true" />
+                <element signature="e#2164#2165#0" expanded="true" />
+                <element signature="e#2229#2230#0" expanded="true" />
+                <element signature="e#2301#2302#0" expanded="true" />
+                <element signature="e#2366#2367#0" expanded="true" />
+                <element signature="e#2679#2680#0" expanded="true" />
+                <element signature="e#2715#2716#0" expanded="true" />
+                <element signature="class#MyOutcomeProvider#0;class#iotDnaVerify#0" expanded="true" />
+                <element signature="e#4603#4604#0" expanded="true" />
+                <element signature="e#4653#4654#0" expanded="true" />
+                <element signature="class#MyOutcome#0;class#iotDnaVerify#0" expanded="true" />
+                <element signature="e#4548#4549#0" expanded="true" />
+                <element signature="e#4622#4623#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-831">
+              <caret line="23" column="96" selection-start-line="23" selection-start-column="96" selection-end-line="23" selection-end-column="96" />
+              <folding>
+                <element signature="class#3640:3818" expanded="true" />
+                <element signature="e#4947#4948#0" expanded="true" />
+                <element signature="e#5014#5015#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/com/example/iotDna/iotDnaVerify.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -27,10 +70,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/Verify.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+            <state relative-caret-position="157">
+              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#492#493#0" expanded="true" />
+                <element signature="e#526#527#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -58,15 +102,29 @@
       <find>expires</find>
       <find>database</find>
       <find>fireba</find>
+      <find>iotDnaBearer</find>
+      <find>iotDnaAddress</find>
+      <find>Authorization</find>
+      <find>iot_dna_url</find>
+      <find>to_do</find>
+      <find>server</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="javaservlets &lt;javaservlets@hotmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/com/example/iotDna/iotDnaVerify.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaVerify.java" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/Verify.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaVerify.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/example/iotDna/iotDnaVerify.properties" />
       </list>
     </option>
   </component>
@@ -82,6 +140,7 @@
     <option name="width" value="1280" />
     <option name="height" value="729" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -93,7 +152,95 @@
           <expand>
             <path>
               <item name="iotDnaVerify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="node" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iotDnaVerify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="node" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iotDnaVerify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="node" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iotDnaVerify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="node" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iotDnaVerify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="node" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iotDnaVerify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="node" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iotDnaVerify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="node" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="iotDna" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iotDnaVerify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="node" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iotDnaVerify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="node" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iotDnaVerify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="node" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iotDnaVerify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="node" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="iotDna" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iotDnaVerify" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
+            <path>
+              <item name="iotDnaVerify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
             </path>
           </expand>
           <select />
@@ -185,17 +332,22 @@
       <workItem from="1553266501340" duration="589000" />
       <workItem from="1553268882406" duration="393000" />
       <workItem from="1553528979011" duration="1115000" />
-      <workItem from="1553548080784" duration="406000" />
+      <workItem from="1553548080784" duration="579000" />
+      <workItem from="1553611409297" duration="19000" />
+      <workItem from="1553619121780" duration="458000" />
+      <workItem from="1554492364453" duration="18000" />
+      <workItem from="1554492412330" duration="8149000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35417000" />
+    <option name="totallyTimeSpent" value="44234000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="729" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13327949" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13247173" />
       <window_info id="Designer" order="1" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -206,11 +358,11 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32967034" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3291536" />
+      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.32810047" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Structure" order="1" weight="0.095315024" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -250,32 +402,11 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaVerify.java</url>
-          <line>164</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaVerify.java</url>
-          <line>93</line>
-          <properties />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="cleared to_do list" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleared to_do list" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore-osgi/4.4.5/httpcore-osgi-4.4.5.jar!/org/apache/http/util/EntityUtils.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2772">
@@ -290,43 +421,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/example/iotDna/iotDnaVerify.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../wearable/zOld/testMobi/app/src/main/java/com/forgerock/iotdna/MainActivity.kt" />
     <entry file="file://$PROJECT_DIR$/../wearable/zOld/wearFirebase/wear/src/main/java/com/forgerock/iotdna/HttpTask.kt" />
     <entry file="file://$PROJECT_DIR$/../wearable/zOld/wearFirebase/wear/src/main/java/com/forgerock/iotdna/MainActivity.kt" />
     <entry file="file://$PROJECT_DIR$/../wearable/zOld/wearable/wear/src/main/java/com/forgerock/iotdna/MainActivity.kt" />
     <entry file="file://$PROJECT_DIR$/../wearable/zOld/wearable/wear/src/main/java/com/forgerock/iotdna/HttpTask.kt" />
     <entry file="file://$PROJECT_DIR$/../wearable/zOld/wearFirebase/mobile/src/main/java/com/forgerock/iotdna/MainActivity.kt" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaServer.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaVerify.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="198">
+          <caret line="2131" column="19" selection-start-line="2131" selection-start-column="19" selection-end-line="2131" selection-end-column="19" />
           <folding>
-            <element signature="e#0#6613#0" expanded="true" />
-            <element signature="class#Config#0;class#iotDnaVerify#0" expanded="true" />
+            <element signature="e#82971#82972#0" expanded="true" />
+            <element signature="e#83020#83021#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/Verify.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+        <state relative-caret-position="157">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#492#493#0" expanded="true" />
+            <element signature="e#526#527#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-831">
+          <caret line="23" column="96" selection-start-line="23" selection-start-column="96" selection-end-line="23" selection-end-column="96" />
+          <folding>
+            <element signature="class#3640:3818" expanded="true" />
+            <element signature="e#4947#4948#0" expanded="true" />
+            <element signature="e#5014#5015#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/example/iotDna/iotDnaVerify.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaVerify.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="53" column="46" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="46" />
+          <folding>
+            <element signature="e#2024#2025#0" expanded="true" />
+            <element signature="e#2087#2088#0" expanded="true" />
+            <element signature="e#2164#2165#0" expanded="true" />
+            <element signature="e#2229#2230#0" expanded="true" />
+            <element signature="e#2301#2302#0" expanded="true" />
+            <element signature="e#2366#2367#0" expanded="true" />
+            <element signature="e#2679#2680#0" expanded="true" />
+            <element signature="e#2715#2716#0" expanded="true" />
+            <element signature="class#MyOutcomeProvider#0;class#iotDnaVerify#0" expanded="true" />
+            <element signature="e#4603#4604#0" expanded="true" />
+            <element signature="e#4653#4654#0" expanded="true" />
+            <element signature="class#MyOutcome#0;class#iotDnaVerify#0" expanded="true" />
+            <element signature="e#4548#4549#0" expanded="true" />
+            <element signature="e#4622#4623#0" expanded="true" />
           </folding>
         </state>
       </provider>

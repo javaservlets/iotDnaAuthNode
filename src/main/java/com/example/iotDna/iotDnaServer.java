@@ -1,7 +1,5 @@
 package com.example.iotDna;
 
-import static com.sun.identity.idm.AMIdentityRepository.debug;
-
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -19,23 +17,40 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 
-class iotDnaServer {
-    private static iotDnaServer server = null;
-    private static String accessTkn = null;
-    private static String iot_dna_url = null;
+import static com.sun.identity.idm.AMIdentityRepository.debug;
 
-    private iotDnaServer(String url) throws NodeProcessException {
+/*
+This class gets passed an access server url, a bearer token, and a verification server url. On instantiation
+it retrieves an access token and uses it later during a challenge (verification request). Latter request has
+1. the user name
+2. serial number of iot device (ie, wearable)
+3. guuid that iotDna returned earlier during device registration
+*/
+
+class iotDnaServer {
+    private static String access_url = null; // this is where you request access ...
+    private static String bearer_tkn = null; //... with this bearer ...
+    private static String access_tkn = null; // ... to get this token ...
+    private static iotDnaServer server = null; // ... that you then can take to their verification server
+    private static String iot_dna_url = null;
+    private static String AUTH_HEADER = "Authorization";
+    private static String CONTENT_TYPE = "Content-Type";
+    private static String PAYLOAD_TYPE = "access_token";
+
+    iotDnaServer(String url, String access, String bearer) throws NodeProcessException {
         try {
             iot_dna_url = url;
-            accessTkn = getAccessToken(); //
+            bearer_tkn = bearer;
+            access_url = access;
+            access_tkn = getAccessToken(); //
         } catch (Exception e) {
             throw new NodeProcessException(e);
         }
     }
 
-    static iotDnaServer getInstance(String url) throws NodeProcessException {
+    static iotDnaServer getInstance(String url, String access, String bearer) throws NodeProcessException {
         if (server == null) {
-            server = new iotDnaServer(url);
+            server = new iotDnaServer(url, access, bearer);
         }
         return server;
     }
@@ -44,11 +59,9 @@ class iotDnaServer {
         boolean attr = false;
         String payload = "";
         HttpClient httpclient = HttpClients.createDefault();
-        HttpPost http = new HttpPost(iot_dna_url + "/tenant/ImageWare/iot/verify/" + guuid); //todo port num should b configurable as well
-        //TODO Pull Authorization as constant as it is used multiple times
-        http.setHeader("Authorization",  "Bearer " + accessTkn); // grabbed on init'ion of this class
-        //TODO Pull Content-Type as constant as it is used multiple times
-        http.setHeader("Content-Type", "application/json");
+        HttpPost http = new HttpPost(iot_dna_url + "/tenant/ImageWare/iot/verify/" + guuid);
+        http.setHeader(AUTH_HEADER,  "Bearer " + access_tkn); // grabbed on init'ion of this class
+        http.setHeader(CONTENT_TYPE, "application/json"); //update
         http.setHeader("Accept", "application/json");
         StringEntity params =
                 new StringEntity("{ \"categories\": [ \"apk\" ], \"signature\":{\"signature\":\"" + usr+serial + "\"} }");
@@ -61,8 +74,7 @@ class iotDnaServer {
             payload = EntityUtils.toString(entity);
             log("      resp is " + payload);
         }
-        //TODO Check the HTTP Status code in addition to the payload
-        if (payload.contains("true")) {
+        if (response.toString().contains("200") && payload.contains("true")) { //update
             attr = true;
         }
         return attr;
@@ -70,13 +82,9 @@ class iotDnaServer {
 
     private String getAccessToken() throws IOException, JSONException {
         HttpClient httpclient = HttpClients.createDefault();
-        //TODO Pull out as config
-        HttpPost http = new HttpPost("https://gmi-ha.iwsinc.com/usermanager/oauth/token"); //rj? props file
-        //  NOTE url for tkn is different than the one for verification!
-        //TODO Pull Authorization as constant as it is used multiple times
-        http.setHeader("Authorization", "Basic Zm9yZ2Vyb2NrOmRzMjQzIUAhSFlVaUg="); //todo pass these in as well via config
-        //TODO Pull Content-Type as constant as it is used multiple times
-        http.setHeader("Content-Type", "application/x-www-form-urlencoded");
+        HttpPost http = new HttpPost(access_url); //update
+        http.setHeader(AUTH_HEADER, "Basic " + bearer_tkn);
+        http.setHeader(CONTENT_TYPE, "application/x-www-form-urlencoded"); //update
 
         ArrayList<NameValuePair> params = new ArrayList<NameValuePair>() {{
             add(new BasicNameValuePair("scope", "IGNORED"));
@@ -93,8 +101,7 @@ class iotDnaServer {
             log("      resp is " + payload);
             if (payload.contains("Error")) {
                 return ""; //this is the default val
-                //TODO Pull access_token as constant as it is used multiple times
-            } else if (payload.contains("access_token")) {
+            } else if (payload.contains(PAYLOAD_TYPE)) {
                 return stripNoise(payload);
             }
         }
@@ -103,8 +110,7 @@ class iotDnaServer {
 
     private static String stripNoise(String parent) throws JSONException {
         JSONObject jsonObject = new JSONObject(parent);
-        //TODO Pull access_token as constant as it is used multiple times
-        Object idToken = jsonObject.getString("access_token");
+        Object idToken = jsonObject.getString(PAYLOAD_TYPE); //update
         String noise = idToken.toString();
 
         if (noise.startsWith("[")) { // get only 'value' from "["value"]"
@@ -117,7 +123,7 @@ class iotDnaServer {
     }
 
     private static void log(String str) {
-        debug.error("\r\n           msg:" + str + "\r\n"); //todo change this to MESSAGE
+        debug.message("\r\n           msg:" + str + "\r\n");
     }
 
 }

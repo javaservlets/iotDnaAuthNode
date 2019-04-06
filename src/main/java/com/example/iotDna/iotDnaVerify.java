@@ -17,57 +17,54 @@
 
 package com.example.iotDna;
 
-import org.forgerock.guava.common.collect.ImmutableList;
-import org.forgerock.json.JsonValue;
-import org.forgerock.openam.annotations.sm.Attribute;
-import org.forgerock.openam.auth.node.api.Action;
-import org.forgerock.openam.auth.node.api.Action.ActionBuilder;
-import org.forgerock.openam.auth.node.api.Node;
-import org.forgerock.openam.auth.node.api.NodeProcessException;
-import org.forgerock.openam.auth.node.api.OutcomeProvider;
-import org.forgerock.openam.auth.node.api.TreeContext;
-import org.forgerock.util.i18n.PreferredLocales;
 
 import com.google.inject.assistedinject.Assisted;
 import com.sun.identity.shared.debug.Debug;
+import org.forgerock.guava.common.collect.ImmutableList;
+import org.forgerock.json.JsonValue;
+import org.forgerock.openam.annotations.sm.Attribute;
+import org.forgerock.openam.auth.node.api.*;
+import org.forgerock.openam.auth.node.api.Action.ActionBuilder;
+import org.forgerock.util.i18n.PreferredLocales;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import javax.inject.Inject;
 import java.io.IOException;
 import java.util.List;
-import javax.inject.Inject;
+import java.util.ResourceBundle;
+
+import static org.forgerock.openam.auth.node.api.AbstractDecisionNode.FALSE_OUTCOME_ID;
+import static org.forgerock.openam.auth.node.api.AbstractDecisionNode.TRUE_OUTCOME_ID;
 
 @Node.Metadata(outcomeProvider = iotDnaVerify.MyOutcomeProvider.class, configClass = iotDnaVerify.Config.class)
 
 public class iotDnaVerify implements Node {
 
     private final Config config;
-    //TODO Prefer to use logger vs debug. Like this     private final Logger logger = LoggerFactory.getLogger
-    // (iotDnaVerify.class);
+    private final Logger logger = LoggerFactory.getLogger(iotDnaVerify.class); //update
     private final static String DEBUG_FILE = "iotDnaNode";
     private Debug debug = Debug.getInstance(DEBUG_FILE);
 
 
     public interface Config {
 
-        //TODO default value should be example value
         @Attribute(order = 100)
         default String iotDnaAddress() {
-            return "IotDna Server";
-        } //https://iot-poc.iwsinc.com/
-
-        //TODO Never used, default value should be example value
-        @Attribute(order = 200)
-        default String iotDnaBearer() {
-            return "IotDna Bearer";
+            return "https://iot-poc.iwsinc.com"; //update
         }
 
-        //TODO Never used, should be a int value
-        //Zm9yZ2Vyb2NrOmRzMjQzIUAhSFlVaUg=
-        @Attribute(order = 300)
-        default String expirationValue() {
-            return "Minutes till expiry";
-        } //todo delete since it won't b read
-    }
+        @Attribute(order = 200)
+        default String iotDnaBearerTkn() {
+            return "Zm9yZ2Vyb2NrOmRzMjQzIUAhSFlVaUg=";
+        }
 
+        @Attribute(order = 300)
+        default String iotDnaAccessTkn() {
+            return "https://gmi-ha.iwsinc.com/usermanager/oauth/token";
+        }
+
+    }
 
     @Inject
     public iotDnaVerify(@Assisted Config config) {
@@ -78,12 +75,12 @@ public class iotDnaVerify implements Node {
     public Action process(TreeContext context) throws NodeProcessException {
         JsonValue newState = context.sharedState.copy();
         String usr = newState.get("username").asString();
-        String guuid = newState.get("UserAttribute").asString(); //this is the GUID that iotDna returned 2 us during dev enrollment
+        String guuid = newState.get("UserAttribute").asString(); //this is the GUID that iotDna returned to us during dev enrollment
         String q_msg = newState.get("q_val").asString(); // this was retrieved by the QueueReader node, but populated by the usr interacting w/ their wearable app
 
-        iotDnaServer server = iotDnaServer.getInstance(config.iotDnaAddress());
+        iotDnaServer server = iotDnaServer.getInstance(config.iotDnaAddress(), config.iotDnaAccessTkn(), config.iotDnaBearerTkn());
 
-        boolean verified; //rj? get rid of last param
+        boolean verified;
         try {
             verified = server.verify(usr, guuid, q_msg);
         } catch (IOException e) {
@@ -92,7 +89,6 @@ public class iotDnaVerify implements Node {
         log("     iotDna match got " + verified); //return goTo(false).build(); //rj? why <> work?
 
         try {
-
             if (verified) {
                 return goTo(MyOutcome.TRUE).build();
             } else {
@@ -105,14 +101,14 @@ public class iotDnaVerify implements Node {
 
 
     public static class MyOutcomeProvider implements OutcomeProvider {
+        private static final String BUNDLE = iotDnaVerify.class.getName().replace(".", "/");
+
         @Override
         public List<Outcome> getOutcomes(PreferredLocales locales, JsonValue nodeAttributes) {
-            //ResourceBundle bundle = locales.getBundleInPreferredLocale(iotDnaVerify.BUNDLE, iotDnaVerify.class.getClassLoader()); //rj? can't we use 'this'?
+            ResourceBundle bundle = locales.getBundleInPreferredLocale(BUNDLE, iotDnaVerify.class.getClassLoader());
             return ImmutableList.of(
-                    //TODO pass in displayNames as localized text via properties file
-                    new Outcome(MyOutcome.TRUE.name(), "true"),
-                    new Outcome(MyOutcome.FALSE.name(), "false")
-             );
+                    new Outcome(TRUE_OUTCOME_ID, bundle.getString("trueOutcome")),
+                    new Outcome(FALSE_OUTCOME_ID, bundle.getString("falseOutcome")));
         }
     }
 
@@ -125,20 +121,8 @@ public class iotDnaVerify implements Node {
         FALSE
     }
 
-    //TODO Constructor never used
-    public iotDnaVerify() {
-        this.config = new Config() {
-            @Override
-            public String toString() {
-                return super.toString();
-            }
-        };
-    }
-
-    //TODO Should not always log at error level, log depending on type of message
     private void log(String str) {
-        debug.error("\r\n           msg:" + str + "\r\n");
-        //System.out.println("\n" + str);
+        debug.error("\r\n           msg:" + str + "\r\n"); //update
     }
 
 }
