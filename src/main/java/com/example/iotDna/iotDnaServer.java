@@ -2,6 +2,7 @@ package com.example.iotDna;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -13,11 +14,11 @@ import org.apache.http.util.EntityUtils;
 import org.forgerock.openam.auth.node.api.NodeProcessException;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.ArrayList;
-
-import static com.sun.identity.idm.AMIdentityRepository.debug;
 
 /*
 This class gets passed an access server url, a bearer token, and a verification server url. On instantiation
@@ -33,16 +34,18 @@ class iotDnaServer {
     private static String access_tkn = null; // ... to get this token ...
     private static iotDnaServer server = null; // ... that you then can take to their verification server
     private static String iot_dna_url = null;
-    private static String AUTH_HEADER = "Authorization";
-    private static String CONTENT_TYPE = "Content-Type";
-    private static String PAYLOAD_TYPE = "access_token";
+    private static final String AUTH_HEADER = "Authorization";
+    private static final String CONTENT_TYPE = "Content-Type";
+    private static final String PAYLOAD_TYPE = "access_token";
+
+    private final Logger logger = LoggerFactory.getLogger(iotDnaServer.class);
 
     iotDnaServer(String url, String access, String bearer) throws NodeProcessException {
         try {
             iot_dna_url = url;
             bearer_tkn = bearer;
             access_url = access;
-            access_tkn = getAccessToken(); //
+            access_tkn = getAccessToken();
         } catch (Exception e) {
             throw new NodeProcessException(e);
         }
@@ -61,7 +64,7 @@ class iotDnaServer {
         HttpClient httpclient = HttpClients.createDefault();
         HttpPost http = new HttpPost(iot_dna_url + "/tenant/ImageWare/iot/verify/" + guuid);
         http.setHeader(AUTH_HEADER,  "Bearer " + access_tkn); // grabbed on init'ion of this class
-        http.setHeader(CONTENT_TYPE, "application/json"); //update
+        http.setHeader(CONTENT_TYPE, "application/json");
         http.setHeader("Accept", "application/json");
         StringEntity params =
                 new StringEntity("{ \"categories\": [ \"apk\" ], \"signature\":{\"signature\":\"" + usr+serial + "\"} }");
@@ -74,7 +77,7 @@ class iotDnaServer {
             payload = EntityUtils.toString(entity);
             log("      resp is " + payload);
         }
-        if (response.toString().contains("200") && payload.contains("true")) { //update
+        if (response.getStatusLine().getStatusCode() == HttpStatus.SC_OK && payload.contains("true")) {
             attr = true;
         }
         return attr;
@@ -82,9 +85,9 @@ class iotDnaServer {
 
     private String getAccessToken() throws IOException, JSONException {
         HttpClient httpclient = HttpClients.createDefault();
-        HttpPost http = new HttpPost(access_url); //update
+        HttpPost http = new HttpPost(access_url);
         http.setHeader(AUTH_HEADER, "Basic " + bearer_tkn);
-        http.setHeader(CONTENT_TYPE, "application/x-www-form-urlencoded"); //update
+        http.setHeader(CONTENT_TYPE, "application/x-www-form-urlencoded");
 
         ArrayList<NameValuePair> params = new ArrayList<NameValuePair>() {{
             add(new BasicNameValuePair("scope", "IGNORED"));
@@ -110,7 +113,7 @@ class iotDnaServer {
 
     private static String stripNoise(String parent) throws JSONException {
         JSONObject jsonObject = new JSONObject(parent);
-        Object idToken = jsonObject.getString(PAYLOAD_TYPE); //update
+        Object idToken = jsonObject.getString(PAYLOAD_TYPE);
         String noise = idToken.toString();
 
         if (noise.startsWith("[")) { // get only 'value' from "["value"]"
@@ -122,8 +125,8 @@ class iotDnaServer {
         return noise;
     }
 
-    private static void log(String str) {
-        debug.message("\r\n           msg:" + str + "\r\n");
+    private  void log(String str) {
+        logger.debug("msg:" + str + "\r\n");
     }
 
 }
