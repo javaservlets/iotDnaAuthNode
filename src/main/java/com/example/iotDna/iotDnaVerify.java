@@ -56,7 +56,6 @@ public class iotDnaVerify extends AbstractDecisionNode {
             return "Zm9yZ2Vyb2NrOmRzMjQzIUAhSFlVaUg=";
         }
 
-
     }
 
     @Inject
@@ -77,6 +76,7 @@ public class iotDnaVerify extends AbstractDecisionNode {
         try {
             verified = server.verify(usr, guuid, q_msg);
         } catch (IOException e) {
+
             throw new NodeProcessException(e);
         }
         log("     iotDna match got " + verified);

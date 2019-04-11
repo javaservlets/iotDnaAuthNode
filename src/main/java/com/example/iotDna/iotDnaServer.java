@@ -40,7 +40,7 @@ class iotDnaServer {
 
     private final Logger logger = LoggerFactory.getLogger(iotDnaServer.class);
 
-    iotDnaServer(String url, String access, String bearer) throws NodeProcessException {
+    public iotDnaServer(String url, String access, String bearer) throws NodeProcessException {
         try {
             iot_dna_url = url;
             bearer_tkn = bearer;
@@ -59,11 +59,12 @@ class iotDnaServer {
     }
 
     boolean verify(String usr, String guuid, String serial) throws IOException {
+        log("      verify req  is " + usr + " / " + guuid + " / " + serial + " accTkn: " + access_tkn);
         boolean attr = false;
         String payload = "";
         HttpClient httpclient = HttpClients.createDefault();
         HttpPost http = new HttpPost(iot_dna_url + "/tenant/ImageWare/iot/verify/" + guuid);
-        http.setHeader(AUTH_HEADER,  "Bearer " + access_tkn); // grabbed on init'ion of this class
+        http.setHeader(AUTH_HEADER,  "Bearer " + access_tkn); // grabbed on init'ion of this class e2ede5fc-b46c-4167-be17-6874666a681b
         http.setHeader(CONTENT_TYPE, "application/json");
         http.setHeader("Accept", "application/json");
         StringEntity params =
@@ -78,6 +79,7 @@ class iotDnaServer {
             log("      resp is " + payload);
         }
         if (response.getStatusLine().getStatusCode() == HttpStatus.SC_OK && payload.contains("true")) {
+            log("      we verified with " + payload);
             attr = true;
         }
         return attr;
@@ -101,7 +103,7 @@ class iotDnaServer {
 
         if (entity != null) {
             String payload = EntityUtils.toString(entity);
-            log("      resp is " + payload);
+            log("      access tkn resp is " + payload);
             if (payload.contains("Error")) {
                 return ""; //this is the default val
             } else if (payload.contains(PAYLOAD_TYPE)) {
@@ -126,6 +128,7 @@ class iotDnaServer {
     }
 
     private  void log(String str) {
+        System.out.println(str);
         logger.debug("msg:" + str + "\r\n");
     }
 

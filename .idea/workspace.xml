@@ -5,7 +5,16 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaVerify.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaVerify.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/iotDna/iotDnaVerify.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/iotDna/iotDnaVerify.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/iotDna/iotDnaServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/iotDna/iotDnaServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/iotDna/iotDnaVerify$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/iotDna/iotDnaVerify$Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/iotDna/iotDnaVerify$Config.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/iotDna/iotDnaVerify$MyOutcome.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/iotDna/iotDnaVerify$MyOutcomeProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/iotDna/iotDnaVerify.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/iotDna/iotDnaVerify.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/iotDna/iotDnaVerify.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/iotDna/iotDnaVerify.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/iotDnaVerify-1.0.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/iotDnaVerify-1.0.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,50 +28,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaVerify.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="53" column="46" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="46" />
+            <state relative-caret-position="487">
+              <caret line="72" column="20" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="20" />
               <folding>
-                <element signature="e#2024#2025#0" expanded="true" />
-                <element signature="e#2087#2088#0" expanded="true" />
-                <element signature="e#2164#2165#0" expanded="true" />
-                <element signature="e#2229#2230#0" expanded="true" />
-                <element signature="e#2301#2302#0" expanded="true" />
-                <element signature="e#2366#2367#0" expanded="true" />
-                <element signature="e#2679#2680#0" expanded="true" />
-                <element signature="e#2715#2716#0" expanded="true" />
-                <element signature="class#MyOutcomeProvider#0;class#iotDnaVerify#0" expanded="true" />
-                <element signature="e#4603#4604#0" expanded="true" />
-                <element signature="e#4653#4654#0" expanded="true" />
-                <element signature="class#MyOutcome#0;class#iotDnaVerify#0" expanded="true" />
-                <element signature="e#4548#4549#0" expanded="true" />
-                <element signature="e#4622#4623#0" expanded="true" />
+                <element signature="class#Config#0;class#iotDnaVerify#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-831">
-              <caret line="23" column="96" selection-start-line="23" selection-start-column="96" selection-end-line="23" selection-end-column="96" />
-              <folding>
-                <element signature="class#3640:3818" expanded="true" />
-                <element signature="e#4947#4948#0" expanded="true" />
-                <element signature="e#5014#5015#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/com/example/iotDna/iotDnaVerify.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+            <state relative-caret-position="244">
+              <caret line="61" column="101" selection-start-line="61" selection-start-column="101" selection-end-line="61" selection-end-column="101" />
             </state>
           </provider>
         </entry>
@@ -70,12 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/Verify.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-              <folding>
-                <element signature="e#492#493#0" expanded="true" />
-                <element signature="e#526#527#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="144">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -108,6 +86,10 @@
       <find>iot_dna_url</find>
       <find>to_do</find>
       <find>server</find>
+      <find>update</find>
+      <find>log</find>
+      <find>debug</find>
+      <find>iotDnaServer</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -121,10 +103,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/main/resources/com/example/iotDna/iotDnaVerify.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaVerify.java" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/Verify.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaServer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaVerify.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/example/iotDna/iotDnaVerify.properties" />
       </list>
     </option>
   </component>
@@ -146,7 +128,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -246,7 +228,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -274,7 +256,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Java Scratch.Verify">
+  <component name="RunManager" selected="Remote.remote">
     <configuration name="Verify" type="Java Scratch" factoryName="Java Scratch" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.iotDna.Verify" />
       <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/Verify.java" />
@@ -336,24 +318,60 @@
       <workItem from="1553611409297" duration="19000" />
       <workItem from="1553619121780" duration="458000" />
       <workItem from="1554492364453" duration="18000" />
-      <workItem from="1554492412330" duration="8149000" />
+      <workItem from="1554492412330" duration="8562000" />
+      <workItem from="1554509467839" duration="41000" />
+      <workItem from="1554755260206" duration="3055000" />
+      <workItem from="1554767200834" duration="683000" />
+      <workItem from="1554782980415" duration="88000" />
+      <workItem from="1554831819812" duration="598000" />
+      <workItem from="1554911050701" duration="2016000" />
+      <workItem from="1555023891638" duration="2448000" />
     </task>
+    <task id="LOCAL-00001" summary="cleared to_do list">
+      <created>1554509193267</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1554509193267</updated>
+    </task>
+    <task id="LOCAL-00002" summary="cleared to_do list v2">
+      <created>1554761104279</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1554761104279</updated>
+    </task>
+    <task id="LOCAL-00003" summary="cleared to_do list">
+      <created>1554761130338</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1554761130338</updated>
+    </task>
+    <task id="LOCAL-00004" summary="cleared to_do list">
+      <created>1554761163238</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1554761163238</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44234000" />
+    <option name="totallyTimeSpent" value="53576000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="729" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13247173" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.134895" />
       <window_info id="Designer" order="1" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291536" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32810047" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.28728414" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.12087912" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -362,7 +380,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.32810047" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32810047" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Structure" order="1" weight="0.095315024" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -403,8 +421,21 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="cleared to_do list v2" />
     <MESSAGE value="cleared to_do list" />
     <option name="LAST_COMMIT_MESSAGE" value="cleared to_do list" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaServer.java</url>
+          <line>61</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore-osgi/4.4.5/httpcore-osgi-4.4.5.jar!/org/apache/http/util/EntityUtils.class">
@@ -438,56 +469,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/example/iotDna/iotDnaVerify.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/forgerock/am/openam-core/6.0.0/openam-core-6.0.0.jar!/org/forgerock/openam/sm/annotations/InstanceBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient-osgi/4.5.2/httpclient-osgi-4.5.2.jar!/org/apache/http/impl/client/HttpClients.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#597#598#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient-osgi/4.5.2/httpclient-osgi-4.5.2.jar!/org/apache/http/client/methods/HttpPost.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+          <folding>
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/Verify.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        <state relative-caret-position="144">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaVerify.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="72" column="20" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="20" />
           <folding>
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#526#527#0" expanded="true" />
+            <element signature="class#Config#0;class#iotDnaVerify#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-831">
-          <caret line="23" column="96" selection-start-line="23" selection-start-column="96" selection-end-line="23" selection-end-column="96" />
-          <folding>
-            <element signature="class#3640:3818" expanded="true" />
-            <element signature="e#4947#4948#0" expanded="true" />
-            <element signature="e#5014#5015#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/example/iotDna/iotDnaVerify.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaVerify.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="53" column="46" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="46" />
-          <folding>
-            <element signature="e#2024#2025#0" expanded="true" />
-            <element signature="e#2087#2088#0" expanded="true" />
-            <element signature="e#2164#2165#0" expanded="true" />
-            <element signature="e#2229#2230#0" expanded="true" />
-            <element signature="e#2301#2302#0" expanded="true" />
-            <element signature="e#2366#2367#0" expanded="true" />
-            <element signature="e#2679#2680#0" expanded="true" />
-            <element signature="e#2715#2716#0" expanded="true" />
-            <element signature="class#MyOutcomeProvider#0;class#iotDnaVerify#0" expanded="true" />
-            <element signature="e#4603#4604#0" expanded="true" />
-            <element signature="e#4653#4654#0" expanded="true" />
-            <element signature="class#MyOutcome#0;class#iotDnaVerify#0" expanded="true" />
-            <element signature="e#4548#4549#0" expanded="true" />
-            <element signature="e#4622#4623#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="244">
+          <caret line="61" column="101" selection-start-line="61" selection-start-column="101" selection-end-line="61" selection-end-column="101" />
         </state>
       </provider>
     </entry>
