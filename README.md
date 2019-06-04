@@ -15,13 +15,13 @@ This document assumes that you already have:
 
 At a high-level, in iotDNA via the following calls first get an access token, then based on a device's serial number (see #2 above) coupled with a user's name, iotDna-enroll it. The result will be a GUID which will be needed during the iotDna-verify call which takes place later in the Authentication Node. 
 
-Thus for a user 'demo' with a wearable serial number of '601KPZK0343037':
+Thus for a user 'iotdna' with a wearable serial number of '601KPZK0343037':
 
 A. curl -X POST https://{your iotDNA server address}/usermanager/oauth/token -d 'scope=IGNORED&grant_type=client_credentials' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Authorization: Basic {your base64 encoded credentials}'
 
 = **{result 1}**
 
-B. curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'Authorization: Bearer {result 1}' -d '{ "allowDuplicate": true, "categories": [ "apk" ], "signature": {"signature":"demo601KPZK0343037"} }' 'https://{your iotDNA server address}/tenant/1/iot/enroll'
+B. curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'Authorization: Bearer {result 1}' -d '{ "allowDuplicate": true, "categories": [ "apk" ], "signature": {"signature":"iotdna601KPZK0343037"} }' 'https://{your iotDNA server address}/tenant/1/iot/enroll'
 
 = **{result 2}**
 
@@ -56,7 +56,7 @@ C. Update in ForgeRock the user's attribute of **sunIdentityMSISDNNumber** with 
 10. Configure these nodes as shown in this image, and lick the **Save** button on the canvas:
 ![image alt text](./images/10.png)
 
-11. Add the tree node **iotDNA Node** to the canvas. Fill in the value fors **iotDnaAddress** and **iotDna Bearer** (from step B above). Configure these nodes as shown in this image:
+11. Add the tree node **iotDNA Node** to the canvas. Fill in the value fors **iotDnaAddress** and **iotDna Basic** (from step B above). Configure these nodes as shown in this image:
 ![image alt text](./images/11a.png)
 
 12. Add the tree node **Polling Wait Node**. Under the **Waiting Message** attribute, enter 'en' for the key and 'Open your wearable now' for the value and make sure to then click the **+** followed by the **add** button.

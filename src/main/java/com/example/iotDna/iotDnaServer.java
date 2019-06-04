@@ -59,6 +59,12 @@ class iotDnaServer {
     }
 
     boolean verify(String usr, String guuid, String serial) throws IOException {
+        try {
+            if (access_tkn.length() < 1 ) access_tkn = getAccessToken();
+        } catch (Exception e) {
+            log("can't get access token!!");
+        }
+
         log("      verify req  is " + usr + " / " + guuid + " / " + serial + " accTkn: " + access_tkn);
         boolean attr = false;
         String payload = "";
@@ -97,7 +103,6 @@ class iotDnaServer {
         }};
 
         http.setEntity(new UrlEncodedFormEntity(params, "UTF-8"));
-
         HttpResponse response = httpclient.execute(http);
         HttpEntity entity = response.getEntity();
 

@@ -3,18 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="e85b2cd6-067f-4f4f-ba49-87a6bda25fc9" name="Default Changelist" comment="cleared to_do list">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/11a.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/11a.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/13.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/13.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaVerify.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaVerify.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/iotDna/iotDnaServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/iotDna/iotDnaServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/iotDna/iotDnaVerify$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/iotDna/iotDnaVerify$Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/iotDna/iotDnaVerify$Config.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/iotDna/iotDnaVerify$MyOutcome.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/iotDna/iotDnaVerify$MyOutcomeProvider.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/iotDna/iotDnaVerify.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/iotDna/iotDnaVerify.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/iotDna/iotDnaVerify.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/iotDna/iotDnaVerify.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/iotDnaVerify-1.0.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/iotDnaVerify-1.0.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaVerify.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
-              <caret line="72" column="20" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="20" />
+            <state relative-caret-position="612">
+              <caret line="76" column="74" selection-start-line="76" selection-start-column="68" selection-end-line="76" selection-end-column="74" />
               <folding>
                 <element signature="class#Config#0;class#iotDnaVerify#0" expanded="true" />
               </folding>
@@ -43,17 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="61" column="101" selection-start-line="61" selection-start-column="101" selection-end-line="61" selection-end-column="101" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/Verify.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="177">
+              <caret line="82" column="29" selection-start-line="82" selection-start-column="29" selection-end-line="82" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -69,10 +58,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>bundle</find>
-      <find>geto</find>
-      <find>newState</find>
-      <find>entit</find>
       <find>tablenam</find>
       <find>fire</find>
       <find>iotdnaat</find>
@@ -88,8 +73,21 @@
       <find>server</find>
       <find>update</find>
       <find>log</find>
-      <find>debug</find>
       <find>iotDnaServer</find>
+      <find>debug</find>
+      <find>DEBUG_FILE</find>
+      <find>demo</find>
+      <find>verify re</find>
+      <find>access_url</find>
+      <find>get</find>
+      <find>getacc</find>
+      <find>access</find>
+      <find>resp is</find>
+      <find>access_tkn</find>
+      <find>ge</find>
+      <find>bearer_tkn</find>
+      <find>verify</find>
+      <find>bearer</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -104,9 +102,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/resources/com/example/iotDna/iotDnaVerify.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaVerify.java" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/Verify.java" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaVerify.java" />
       </list>
     </option>
   </component>
@@ -128,7 +127,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -228,6 +226,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -269,7 +268,7 @@
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" />
-      <option name="HOST" value="robbie.freng.org" />
+      <option name="HOST" value="iot.freng.org" />
       <option name="PORT" value="8000" />
       <option name="AUTO_RESTART" value="false" />
       <RunnerSettings RunnerId="Debug">
@@ -325,7 +324,18 @@
       <workItem from="1554782980415" duration="88000" />
       <workItem from="1554831819812" duration="598000" />
       <workItem from="1554911050701" duration="2016000" />
-      <workItem from="1555023891638" duration="2448000" />
+      <workItem from="1555023891638" duration="3097000" />
+      <workItem from="1555098099601" duration="2298000" />
+      <workItem from="1555167405248" duration="402000" />
+      <workItem from="1555339317205" duration="1333000" />
+      <workItem from="1555372172859" duration="60000" />
+      <workItem from="1555605340577" duration="519000" />
+      <workItem from="1555638482580" duration="1209000" />
+      <workItem from="1559159565851" duration="583000" />
+      <workItem from="1559181280168" duration="2905000" />
+      <workItem from="1559609641174" duration="295000" />
+      <workItem from="1559609996563" duration="559000" />
+      <workItem from="1559683915572" duration="530000" />
     </task>
     <task id="LOCAL-00001" summary="cleared to_do list">
       <created>1554509193267</created>
@@ -359,19 +369,19 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53576000" />
+    <option name="totallyTimeSpent" value="64918000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="729" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.134895" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22940226" />
       <window_info id="Designer" order="1" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291536" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32810047" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.12087912" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.45525903" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -430,9 +440,9 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaServer.java</url>
-          <line>61</line>
+          <line>96</line>
           <properties />
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -506,15 +516,25 @@
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/Verify.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="162">
+          <caret line="9" column="92" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="212">
+            <caret line="23" column="224" selection-start-line="23" selection-start-column="224" selection-end-line="23" selection-end-column="224" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaVerify.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="72" column="20" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="20" />
+        <state relative-caret-position="612">
+          <caret line="76" column="74" selection-start-line="76" selection-start-column="68" selection-end-line="76" selection-end-column="74" />
           <folding>
             <element signature="class#Config#0;class#iotDnaVerify#0" expanded="true" />
           </folding>
@@ -523,8 +543,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iotDna/iotDnaServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="61" column="101" selection-start-line="61" selection-start-column="101" selection-end-line="61" selection-end-column="101" />
+        <state relative-caret-position="177">
+          <caret line="82" column="29" selection-start-line="82" selection-start-column="29" selection-end-line="82" selection-end-column="29" />
         </state>
       </provider>
     </entry>

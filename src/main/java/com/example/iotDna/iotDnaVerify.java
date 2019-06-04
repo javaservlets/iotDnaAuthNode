@@ -13,11 +13,7 @@
  *
  * Copyright 2018 ForgeRock AS.
  */
-
-
 package com.example.iotDna;
-
-
 import com.google.inject.assistedinject.Assisted;
 import com.sun.identity.shared.debug.Debug;
 import org.forgerock.json.JsonValue;
@@ -31,8 +27,15 @@ import java.io.IOException;
 
 @Node.Metadata(outcomeProvider = AbstractDecisionNode.OutcomeProvider.class, configClass = iotDnaVerify.Config.class)
 
-public class iotDnaVerify extends AbstractDecisionNode {
+/*
+This node passes the 'iotDnaServer' helper an access server url, a bearer token, and a verification server url. On instantiation
+it retrieves an access token and uses it later during a challenge (verification request). Latter request has
+1. the user name
+2. serial number of iot device (ie, wearable)
+3. guuid that iotDna returned earlier during device registration
+*/
 
+public class iotDnaVerify extends AbstractDecisionNode {
     private final Config config;
     private final Logger logger = LoggerFactory.getLogger(iotDnaVerify.class);
     private final static String DEBUG_FILE = "iotDnaNode";
@@ -69,10 +72,10 @@ public class iotDnaVerify extends AbstractDecisionNode {
         String usr = newState.get("username").asString();
         String guuid = newState.get("UserAttribute").asString(); //this is the GUID that iotDna returned to us during dev enrollment
         String q_msg = newState.get("q_val").asString(); // this was retrieved by the QueueReader node, but populated by the usr interacting w/ their wearable app
+        boolean verified;
 
         iotDnaServer server = iotDnaServer.getInstance(config.iotDnaVerifyServer(), config.iotDnaAccessServer(), config.iotDnaBearerTkn());
 
-        boolean verified;
         try {
             verified = server.verify(usr, guuid, q_msg);
         } catch (IOException e) {
