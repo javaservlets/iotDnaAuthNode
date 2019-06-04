@@ -50,7 +50,7 @@ C. Update in ForgeRock the user's attribute of **sunIdentityMSISDNNumber** with 
 
 8. Click the **Save** button on the canvas (see image above in step #5).
 
-9. Add the tree node **Queue Reader** to the canvas. Fill in the values for a. your message server (note the out of the box value is https://forgerockip.firebaseio.com) and b. the suitable number of minutes (ie, 2) till the message expires
+9. Add the tree node **Queue Reader** to the canvas. Fill in the values for a. your message server (see the Queue node outlined above) b. a suitable number of minutes till the message is considered expired and c. the name of the value captured from #6 ("UserAttribute")
 ![image alt text](./images/9.png)
 
 10. Configure these nodes as shown in this image, and lick the **Save** button on the canvas:
